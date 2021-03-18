@@ -27,6 +27,8 @@ for pilot in data["pilots"]:
         if matchArr:
             relevant = True
         altitude = fp["altitude"]
+        if altitude.startswith("FL"):
+            altitude = altitude[2:] + "00"
         remarks = fp["remarks"]
         matchRmk = re.match(r'EPWW', remarks, re.M|re.I)
         if matchRmk:
