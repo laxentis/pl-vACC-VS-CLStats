@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv("statistics.csv")
 
-for fl in range(285,365,10):
+for fl in range(285,375,10):
     plt.figure()
     plt.hist(data.Altitude / 100, bins=[0, fl, 660])
     plt.xlabel('Cruising Level [FL]')
