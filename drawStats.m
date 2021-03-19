@@ -30,26 +30,50 @@ statistics = readtable("D:\Programowanie\Python\pl-vACC-VS-CLStats\statistics.cs
 %% Clear temporary variables
 clear opts
 %% Draw histogram with F365 boundary
-subplot(2,2,1);
+subplot(4,2,1);
 histogram(statistics.Altitude/100, [0 365 660]);
 xlabel('Cruising Level [FL]')
 ylabel('Number of flight plans')
 title("F365")
+%% Draw histogram with F355 boundary
+subplot(4,2,2);
+histogram(statistics.Altitude/100, [0 355 660]);
+xlabel('Cruising Level [FL]')
+ylabel('Number of flight plans')
+title("F355")
 %% Draw histogram with F345 boundary
-subplot(2,2,2);
+subplot(4,2,3);
 histogram(statistics.Altitude/100, [0 345 660]);
 xlabel('Cruising Level [FL]')
 ylabel('Number of flight plans')
 title("F345")
+%% Draw histogram with F355 boundary
+subplot(4,2,4);
+histogram(statistics.Altitude/100, [0 335 660]);
+xlabel('Cruising Level [FL]')
+ylabel('Number of flight plans')
+title("F335")
 %% Draw histogram with F325 boundary
-subplot(2,2,3);
+subplot(4,2,5);
 histogram(statistics.Altitude/100, [0 325 660]);
 xlabel('Cruising Level [FL]')
 ylabel('Number of flight plans')
 title("F325")
+%% Draw histogram with F315 boundary
+subplot(4,2,6);
+histogram(statistics.Altitude/100, [0 315 660]);
+xlabel('Cruising Level [FL]')
+ylabel('Number of flight plans')
+title("F315")
 %% Draw histogram with F305 boundary
-subplot(2,2,4);
+subplot(4,2,7);
 histogram(statistics.Altitude/100, [0 305 660]);
 xlabel('Cruising Level [FL]')
 ylabel('Number of flight plans')
 title("F305")
+%% Draw histogram with F295 boundary
+subplot(4,2,8);
+histogram(statistics.Altitude/100, [0 295 660]);
+xlabel('Cruising Level [FL]')
+ylabel('Number of flight plans')
+title("F295")
