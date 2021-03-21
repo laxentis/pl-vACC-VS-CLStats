@@ -31,6 +31,8 @@ for pilot in data["pilots"]:
             altitude = altitude[2:] + "00"
         if altitude.startswith("F"):
             altitude = altitude[1:] + "00"
+        if altitude.startswith("A"):
+            altitude = altitude[1:] + "00"
         if len(altitude) < 4:
             altitude = altitude + "00"
         remarks = fp["remarks"]
